@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>为文明加油</title>
+	<style>
+		
+	</style>
+	<script>
+		document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+		window.protocol = location.protocol;
+		window.h5name = 'hotwords';
+		window.customid = '1308797546';//为文明加油
+
+		window.baseUrl = window.protocol+'//api.zmiti.com/v2';
+		window.wxappid = 'wxfacf4a639d9e3bcc';
+		window.wxappsecret='149cdef95c99ff7cab523d8beca86080';
+
+		window.server = 'bluesky';
+		//xinhuanet
+		if(window.customid === '1308797546'){
+			//window.baseUrl = window.protocol+'//h5.zmiti.com/public'+h5name;
+			window.wxappid = 'wxec2401ee9a70f3d9';
+			window.wxappsecret='fc2c8e7c243da9e8898516fa5da8cbbb';
+		}
+		window.needDeleteImg = false;
+		window.desc = '为文明加油';
+		document.addEventListener('touchmove',function(e){e.preventDefault()},{passive:false})
+	</script>
+	<style>
+		iframe{
+			width: 100%;height: 100%;position: absolute;left: 0;top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="app"></div>
+
+	<script src='./assets/js/base.js'></script>
+	<script>
+
+
+		function loadScript(src){
+			var script = document.createElement('script');
+			script.src =src;
+			document.body.appendChild(script)
+		}
+	    (function(){
+	       var script = document.createElement('script');
+	       script.src = window.protocol + '//res.wx.qq.com/open/js/jweixin-1.2.0.js';
+	       document.body.appendChild(script);
+	    })()
+	    window.israndPv = false;
+  		//
+		//loadScript('./assets/js/index11.js');
+	</script>
+	<script src='http://localhost:4020/index.js'></script> 
+<!-- 
+-->
+</body>
+</html>

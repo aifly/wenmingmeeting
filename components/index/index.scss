@@ -1,0 +1,169 @@
+﻿@import "../css/base.scss";
+
+html, body, div, p, ul, li, ol, dl, dt, dd, header, footer, video, h1, h2, h3, h4, canvas, section, figure {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+html, body {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	font-family: "Helvetica Neue", 'Helvetica', "Microsoft YaHei", '微软雅黑', arial, sans-serif;
+	font-size: 14px;
+	background: #fff;
+	overflow: hidden;
+
+	&>div {
+	}
+
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+	width: 100%;
+	height: auto;
+}
+
+.zmiti-index-main-ui {
+	overflow: hidden;
+	z-index: -1;
+	opacity: 0;
+
+	&.show {
+		opacity: 1;
+		z-index: 102;
+	}
+
+	.zmiti-title {
+		@include pos(a);
+		width: 8rem;
+		left: 1rem;
+		top: 4rem;
+	}
+
+	.zmiti-logo {
+		@include pos(a);
+		width: 2rem;
+		left: .8rem;
+		top: .5rem;
+	}
+
+	.zmiti-light1 {
+		@include pos(a);
+		top: 1.6rem;
+		left: 3rem;
+		@include animation(opacity 2s linear infinite alternate);
+	}
+
+	.zmiti-light2 {
+		@include pos(a);
+		top: 2.5rem;
+		left: .7rem;
+		width: 4rem;
+		@include animation(opacity 2s .5s linear infinite alternate);
+	}
+
+	.zmiti-index-btn {
+		@include pos(a);
+		color: #fff;
+		background: #e17c26;
+		width: 3rem;
+		height: 1rem;
+		left: 2.5rem;
+		top: 7.5rem;
+		line-height: 1rem;
+		text-align: center;
+		@include br(20px);
+		font-size: .5rem;
+
+		&.active {
+			@include transform(scale(.98));
+		}
+
+	}
+
+}
+
+.zmiti-mask {
+	@include pos(a);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+	z-index: 300;
+	text-align: right;
+
+	img {
+		width: 6rem;
+		@include pos(a);
+		right: 0;
+		top: 0;
+	}
+
+}
+
+.zmiti-loading {
+	z-index: 1000;
+
+	.zmiti-loading-ui {
+		width: 6rem;
+		left: 2rem;
+		@include pos(a);
+		top: 6rem;
+
+		.zmiti-loading-bar {
+			width: 6rem;
+			//height: 1rem;
+			@include pos(r);
+			margin: 0 auto;
+
+			.zmiti-target {
+				$size: .4rem;
+				width: $size;
+				height: $size;
+				@include br();
+				background: #fff;
+				left: 50%;
+				top: .4rem;
+				@include pos(a);
+				margin-left: -$size/2;
+				@include animation(scale linear 2s  infinite alternate);
+			}
+
+		}
+
+		.zmiti-progress {
+			margin-top: .5rem;
+			text-align: center;
+			color: #fff;
+			font-family: Georgia;
+			font-size: .7rem;
+		}
+
+	}
+
+}
+
+.zmiti-play {
+	top: 2rem !important;
+}
+
+@-webkit-keyframes opacity {
+	to {
+		opacity: .6;
+	}
+
+}

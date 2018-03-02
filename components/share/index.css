@@ -1,0 +1,59 @@
+/*.ant-btn:focus, .ant-btn:hover,.ant-input:focus, .ant-input:hover {
+    background-color: #fff;
+    border-color: #bf1616;
+    box-shadow: 0 0 0 2px rgba(191, 22, 22, 0.1);
+}*/
+.lt-full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.zmiti-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; }
+
+.zmiti-play {
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  right: .5rem;
+  top: .5rem; }
+  .zmiti-play.rotate {
+    -webkit-animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite; }
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.zmiti-share-main-ui {
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 108;
+  display: none;
+  opacity: 0; }
+  .zmiti-share-main-ui.show {
+    display: block;
+    z-index: 108;
+    opacity: 1; }
+  .zmiti-share-main-ui .zmiti-header {
+    width: 8rem;
+    height: 2rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-box-orient: horizontal; }
+    .zmiti-share-main-ui .zmiti-header img {
+      width: 1.5rem; }
+    .zmiti-share-main-ui .zmiti-header .zmiti-yqi img {
+      width: 3rem; }
+
+/*# sourceMappingURL=index.css.map */
