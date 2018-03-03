@@ -144,6 +144,8 @@ var zmitiUtil = {
 					window.headimgurl = s.headimgurl;
 					window.openid = s.openid;
 
+					alert(customid);
+					alert(s.openid);
 
 					s.saveWxUserInfo({
 						worksid: customid,
@@ -152,7 +154,6 @@ var zmitiUtil = {
 						headimgurl: s.headimgurl,
 					});
 
-					alert(window.nickname + '\n' + window.openid)
 
 					//var URI = window.location.href.split('#')[0];
 

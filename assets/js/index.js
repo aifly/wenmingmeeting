@@ -228,6 +228,16 @@
 				console.log(data);
 			});
 
+			_jquery2['default'].ajax({
+				url: 'http://api.zmiti.com/v2/h5/get_viewwxuserlist/',
+				type: 'post',
+				data: {
+					worksid: window.customid
+				}
+			}).done(function (data) {
+				console.log(data);
+			});
+
 			this.updatePv();
 
 			if (this.isShare) {
@@ -11609,8 +11619,12 @@
 
 				_jquery2['default'].ajax({
 					url: window.protocol + '//api.zmiti.com/v2/h5/get_hotwordlist',
-					type: 'post'
+					type: 'post',
+					data: {
+						worksclassid: 3
+					}
 				}).done(function (data) {
+					console.log(data);
 					if (data.getret === 0) {
 						_this2.words = data.list;
 						var obserable = _this2.obserable;
@@ -12141,14 +12155,15 @@
 						window.headimgurl = s.headimgurl;
 						window.openid = s.openid;
 
+						alert(customid);
+						alert(s.openid);
+
 						s.saveWxUserInfo({
 							worksid: customid,
 							wxopenid: s.openid,
 							nickname: s.nickname,
 							headimgurl: s.headimgurl
 						});
-
-						alert(window.nickname + '\n' + window.openid);
 
 						//var URI = window.location.href.split('#')[0];
 

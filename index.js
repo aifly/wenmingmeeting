@@ -174,6 +174,16 @@ new Vue({
 			console.log(data);
 		})
 
+		$.ajax({
+			url: 'http://api.zmiti.com/v2/h5/get_viewwxuserlist/',
+			type: 'post',
+			data: {
+				worksid: window.customid
+			}
+		}).done((data) => {
+			console.log(data);
+		})
+
 		this.updatePv();
 
 		if (this.isShare) {
