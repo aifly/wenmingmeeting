@@ -17,7 +17,8 @@
 		width: 8rem;
 		height: 2rem;
 		@include displayBox(horizontal);
-		$size: 1.5rem;
+		$size: 1rem;
+		margin: .7rem auto;
 
 		img {
 			width: $size;
@@ -28,6 +29,69 @@
 				width: $size*2;
 			}
 
+		}
+
+		div {
+			margin: 0 .13rem;
+		}
+
+		.zmiti-headimg {
+			width: 1.5rem;
+			height: 1.5rem;
+			@include br();
+			background: #fff;
+		}
+
+	}
+
+	.zmiti-wish-words {
+		color: #fff;
+		width: 100%;
+		text-align: center;
+		font-size: .6rem;
+
+		span {
+			color: #ffae00;
+			font-size: .8rem
+		}
+
+	}
+
+	.zmiti-share-bottom {
+		color: #fff;
+		@include pos(a);
+		bottom: 3rem;
+		left: 0;
+		width: 100%;
+
+		&>div {
+			&:nth-of-type(1) {
+				text-align: center;
+
+				span {
+					color: #ffae00;
+					font-size: 1rem;
+					margin-left: .1rem;
+				}
+
+			}
+
+		}
+
+		.zmiti-scroll {
+			height: 1rem;
+		}
+
+		.zmiti-share-btn {
+			margin: 0 auto;
+			width: 3rem;
+			height: 1rem;
+			line-height: 1rem;
+			background: #ffae00;
+			text-align: center;
+			line-height: 1rem;
+			@include br(20px);
+			font-size: .45rem;
 		}
 
 	}

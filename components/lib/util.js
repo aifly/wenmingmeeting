@@ -28,7 +28,7 @@ var zmitiUtil = {
 	},
 	wxConfig: function(title, desc, url, isDebug = false) {
 		var s = this;
-		
+
 		var img = window.baseUrl + '/assets/images/300.jpg';
 
 		var appId = this.wxInfo().wxappid;
@@ -117,7 +117,7 @@ var zmitiUtil = {
 			customid
 		} = this.wxInfo();
 
-		if(!s.isWeiXin()){
+		if (!s.isWeiXin()) {
 			return;
 		}
 
@@ -143,6 +143,16 @@ var zmitiUtil = {
 					window.nickname = s.nickname;
 					window.headimgurl = s.headimgurl;
 					window.openid = s.openid;
+
+
+					s.saveWxUserInfo({
+						worksid: customid,
+						wxopenid: s.openid,
+						nickname: s.nickname,
+						headimgurl: s.headimgurl,
+					});
+
+					alert(window.nickname + '\n' + window.openid)
 
 					//var URI = window.location.href.split('#')[0];
 
@@ -192,6 +202,15 @@ var zmitiUtil = {
 
 			}
 		});
+	},
+	saveWxUserInfo(option) {
+		$.ajax({
+			url: window.protocol + '//api.zmiti.com/v2/weixin/add_wxuser/',
+			type: 'post',
+			data: option
+		}).done((data) => {
+			alert('add_wxuser : data.getret => ' + data.getret + '\n data.getmsg =>' + data.getmsg);
+		})
 	}
 }
 export default zmitiUtil;

@@ -6,6 +6,7 @@ var imgs = {
 	checked: './assets/images/checked.png',
 	yqi: './assets/images/yqi.png',
 	he: './assets/images/he.png',
+	arrow: './assets/images/arrow.png',
 	bg: './assets/images/bg.jpg',
 
 

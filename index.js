@@ -163,6 +163,17 @@ new Vue({
 					this.$refs['audio'][data ? 'play' : 'pause']();
 				});*/
 
+		$.ajax({
+			url: 'http://api.zmiti.com/v2/h5/count_hotword',
+			type: 'post',
+			data: {
+				worksclassid: 3,
+				hotwordid: 2
+			}
+		}).done((data) => {
+			console.log(data);
+		})
+
 		this.updatePv();
 
 		if (this.isShare) {
@@ -174,8 +185,8 @@ new Vue({
 				}
 			})
 		} else {
+			zmitiUtil.getOauthurl();
 
-			//zmitiUtil.getOauthurl();
 			//zmitiUtil.wxConfig(document.title, window.desc);
 		}
 	}
